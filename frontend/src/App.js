@@ -21,7 +21,10 @@ function App() {
     } catch (err) { console.error("Sync Error", err); }
   };
 
-  useEffect(() => { fetchExpenses(); }, [filter]);
+  useEffect(() => {
+   fetchExpenses();
+}, [fetchExpenses]);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
